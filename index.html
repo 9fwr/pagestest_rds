@@ -31,12 +31,16 @@
           "undefined"==typeof Promise||"undefined"==typeof globalThis?window.rudderAnalyticsAddScript("https://polyfill-fastly.io/v3/polyfill.min.js?version=3.111.0&features=Symbol%2CPromise&callback=rudderAnalyticsMount"):window.rudderAnalyticsMount()
           ;var loadOptions={};rudderanalytics.load("2qARCKDoXQfe1YD8M1gSpcwS1n6","https://buerotigerybov.dataplane.rudderstack.com",loadOptions)}}}();
         </script>
+        <script>
+            rudderanalytics.identify();
+            rudderanalytics.page("Cart");
+        </script>
     </head>
     <body>
         <div class="text-center">
             <h1>Hello World</h1>
             <p> Just a sample page with sample text and a sample CTA. Click and nothing will happen.</p>
-            <a class="btn btn-primary">Signup now</a>
+            <a onclick="rudderanalytics.track('click')" class="btn btn-primary">Signup now</a>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
